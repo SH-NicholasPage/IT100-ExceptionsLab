@@ -1,17 +1,15 @@
 ﻿using System;
 
-namespace Part3
+namespace Part3;
+public static class MathUtils
 {
-    public class MathUtils
+    public static long Factorial(int n)
     {
-        public static long Factorial(int n)
+        long fact = 1;
+        for (int i = n; i > 0; i--)
         {
-            long fact = 1;
-            for (int i = n; i > 0; i--)
-            {
-                fact *= i;
-            }
-            return fact;
+            fact *= i;
         }
+        return fact;
     }
 }

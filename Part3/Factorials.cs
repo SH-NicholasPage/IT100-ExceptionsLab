@@ -1,21 +1,20 @@
 ﻿using System;
 
-namespace Part3
+namespace Part3;
+
+public static class Factorials
 {
-    public class Factorials
+    public static void Main()
     {
-        public static void Main()
+        String keepGoing = "y";
+        
+        while(keepGoing.Equals("y", StringComparison.OrdinalIgnoreCase))
         {
-            String keepGoing = "y";
-            
-            while(keepGoing.Equals("y", StringComparison.OrdinalIgnoreCase))
-            {
-                Console.Write("Enter an integer: ");
-                int val = Int32.Parse(Console.ReadLine());
-                Console.WriteLine($"Factorial({val}) = {MathUtils.Factorial(val)}");
-                Console.Write("Another factorial? (y/n) ");
-                keepGoing = Console.ReadLine();
-            }
+            Console.Write("Enter an integer: ");
+            int val = Int32.Parse(Console.ReadLine()!);
+            Console.WriteLine($"Factorial({val}) = {MathUtils.Factorial(val)}");
+            Console.Write("Another factorial? (y/n) ");
+            keepGoing = Console.ReadLine()!;
         }
     }
 }
